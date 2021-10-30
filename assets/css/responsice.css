@@ -15,6 +15,8 @@
         /*trên mobile độ cao tối thiểu nên là 42 cho dễ bấm */
     }
     .form-control,
+    .modal-input,
+    #buy-ticket,
     .form-submit-btn{
         border-radius: 0% !important;
 
