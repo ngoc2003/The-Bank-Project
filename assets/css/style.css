@@ -1,0 +1,530 @@
+/* Reset CSS */
+*{
+    /*Emet8*/
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+/*           COMMON             */
+/*          dùng chung          */
+html{
+    scroll-behavior: smooth !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    /*hiệu ứng nhảy đến vị trí nào đó trong trang trở nên mượt hơn */
+}
+
+.clear{
+    clear:both;
+}
+
+.text-white{
+    color:white  !important;
+}
+
+.row{
+    margin: 0 -8px;
+    
+}
+
+.row::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.mt-8{
+    margin-top:8px;
+}
+
+.mt-16{
+    margin-top:16px;
+}
+
+.col{
+    float: left;
+    padding: 0 8px;
+}
+
+.col-half{
+    width:50%;
+}
+
+.col-full{
+    width:100%;
+}
+/*     main        */
+#main { 
+    width:100%;
+   
+}
+
+#header {
+    width:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:46px;
+    background-color:black;
+    z-index: 1;
+}
+
+#nav{
+    display: inline-block;
+}
+
+
+#nav, .subnav{
+    list-style-type: none;/* bỏ dấu chấm list */
+}
+
+
+#nav >li{
+   display: inline-block; 
+   
+}
+
+#nav li{  
+    position: relative;
+    
+}
+
+#nav > li > a {
+    color: white;
+    text-transform: uppercase;
+    
+}
+
+#nav .subnav a{
+    color:black;
+    line-height:22px;
+    display:block;
+    padding: 8px 16px;
+    
+}
+
+#nav li a{
+    text-decoration: none;
+    display: block; 
+    line-height: 46px;
+    padding:0px 24px; /* trên dưới 14; trái phải 24px */
+    
+}
+
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav li:hover ,
+#nav >li:hover> a{
+    background-color: rgb(185, 171, 171);
+    color:black;
+}
+
+#nav .subnav{
+    min-width: 160px; /* chiều dài tối thiểu của subnav*/
+    display: none;
+    top:100%;
+    /*thêm vào cho chắc chắn vì vị trí absolute 0 phải lúc nào cũng đúng*/
+    position:absolute;
+    background-color:white;
+    box-shadow:0 0 10px grey;
+    
+
+}
+
+#nav .icons{
+    font-size:13px;
+}
+
+#header .mobile-menu-btn:hover{
+    cursor:pointer;
+    background-color: rgb(185, 171, 171);
+    color:black;
+}
+#header .finding-icons:hover{
+    background-color: brown;
+    color:black;
+    cursor:pointer;
+}
+
+#header .mobile-menu-btn{
+    position: absolute;
+    top:0;
+    right:0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
+#header .finding-icons{
+    height:46px;
+    padding:16px 24px;
+    float:right;
+    font-size:13px;
+    color:white;
+}
+#slider {
+    width:100%;
+    position:relative;
+    margin-top:46px; /* tách biệt với thành phần header sau khi fixed */
+    padding-top:50%; /* mặc định 50% chiều ngang của chính nó*/
+    /* background: url('/assets/img/la.jpg') , top center /cover no-repeat; */
+    /*link , position /size , repeat*/
+}
+#slider .text-content{
+    
+    position:absolute;
+    bottom:48px;
+    width:100%;
+    text-align:center; /* căn giữa*/
+    text-shadow: 0 0 1px black;
+    color:white;
+}
+
+#slider .text-heading{
+    font-weight:100;/* dộ dày chữ*/
+    font-size:24px;
+}
+
+#slider .text-description{
+    font-size:15px;
+    margin-top:25px;
+}
+
+
+#content {
+
+}
+#content .content-section{
+    width: 800px;
+    max-width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 64px 16px ;
+    text-align:justify;
+}
+
+#content .section-heading{
+    font-size:30px;
+    text-align: center;
+    font-weight:500;
+    letter-spacing: 4px ;
+}
+
+#content .section-sub-heading{
+    font-size:15px;
+    text-align:center;
+    margin-top:25px;   
+    opacity: 0.6; /* độ trong suốt = độ mờ */
+    font-style:italic;
+}
+
+#content .about-text{
+    margin-top:25px;
+    line-height:1.5;
+
+}
+
+#content .member-list{
+     overflow: hidden; /* ?  */
+     margin-top:48px;
+} 
+
+#content .member-name{
+    font-size:15px;
+}
+
+#content .member-img{
+    margin-top:15px;
+    width:154px;
+    border-radius:4px;
+
+}
+
+#content .member-item{
+    float:left;
+    width:calc(100% / 3);
+    text-align:center;
+   
+}
+   
+.tour-section{
+    background-color:black;
+    
+}
+
+.ticket-list{
+    background-color:white;
+    margin-top:44px;
+    
+}
+
+.ticket-list li{
+    font-size:15px;
+    padding:11px 16px;
+    border-bottom:1px solid #ddd;
+    color: #757575;
+    list-style-type:none;
+}
+
+.ticket-list .sold-out{
+    color:white;
+    background-color:#f44336;
+    padding:3px 4px;
+    margin-left:16px;
+}
+
+.ticket-list .ticket-left{
+    float:right;
+    width:24px;
+    height:24px;
+    background-color:black;
+    color:white;
+    border-radius:50%;
+    text-align:center;
+    line-height:24px;
+    margin-top:-3px; /*dùng margin âm khi có float*/
+}
+.place-list{
+    margin-top:32px;
+    /*kĩ thuật*/
+
+}
+
+
+.place-item{
+    width:33.3333%; 
+    
+}
+
+
+
+.place-content{
+    background-color:white;
+    padding:16px;
+    font-size:15px;
+}
+
+.place-heading{
+    font-size:15px;
+    font-weight:200;
+}
+
+.place-img:hover{
+    opacity: 0.6;
+}
+.place-img{
+    width:100%;
+    display:block;/*xóa khoảng cách giữa img và content*/
+
+}
+
+.place-time{
+    margin-top:15px;
+    opacity: 0.6;
+
+}
+
+.place-desc{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.place-buy-btn:hover{
+    background-color:#ccc;
+    color:black;
+    cursor:pointer;
+}
+.place-buy-btn{
+    display:inline-block;
+    border-style: none;
+    padding: 10px 16px;
+    color:white;
+    text-decoration: none;
+    background-color:black;
+    
+    
+}
+
+/*          CONTACT FORM          */
+.contact-content{
+    margin-top:48px;
+
+}
+.contact-info{
+    font-size:16px;
+    line-height:1.8;
+}
+
+.contact-info i[class*="ti-"] {
+    width:30px;
+    display:inline-block;
+    
+}
+
+.contact-form{
+    font-size:15px;
+
+}
+
+.contact-form .form-control{
+    padding: 13px;
+    border: 1px solid #ccc;
+    width:100%;
+}
+.contact-form .form-submit-btn:hover{
+    background-color: #ccc;
+    cursor:pointer;
+    color:black;
+    
+
+}
+.contact-form .form-submit-btn{
+    background-color: black ;
+    color:white;
+    padding:10px 16px;
+    border-style: none;
+    float:right;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.map-section img{
+    width:100%;
+    height:auto;
+}
+/*          FOOTER SECTION         */
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+.social-list{
+    font-size:20px;
+    padding-bottom: 16px;
+    
+}
+.copyright >a:hover,
+.social-list >a:hover{
+    opacity:0.4;
+    cursor:pointer;
+}
+.social-list >a{
+    color:rgba(0, 0, 0, 0.658);
+    text-decoration: none;
+}
+
+.copyright,
+.copyright >a{
+    color:rgba(0, 0, 0, 0.534);
+    font-size:14px;
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal{
+    /* lớp phủ */ 
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    position:fixed;
+    background:rgba(155, 136, 136, 0.459);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container{
+    position:relative;
+    background-color: white;
+    width:800px;
+    max-width:95%;
+    min-height:200px;
+    animation: modalFaceIn ease 0.5s;
+}
+
+.modal-close:hover{
+    color:#009688;
+    background-color: rgba(245, 245, 245, 0.822);
+    cursor: pointer;
+}
+.modal-close{
+    position:absolute;
+    right:0;
+    top:0;
+    color:white;
+    padding:10px 16px;
+}
+.modal-header p{
+    margin-left: 16px;
+}
+
+.modal-header{
+    background: #009688;
+    height:130px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color:white;
+    letter-spacing: 4px;
+}
+
+.modal-body{
+    background-color: white;
+    padding:0 16px;
+
+}
+
+.modal-label{
+    display:block;
+    padding: 15px 0; 
+}
+
+.modal-input{
+    border:1px solid #ddd;
+    width:100%;
+    padding:8px;
+    font-size:15px;
+    
+}
+
+#buy-ticket:hover{
+    background-color: #ccc;
+    color:black;
+    cursor:pointer;
+}
+#buy-ticket{
+    margin-top:16px;
+    padding:16px;
+    background-color: #009688;
+    border:solid 1px #ddd;
+    color:white;
+    width:100%;
+    font-size: 18px;
+
+}
+
+.modal-footer{
+    float:right;
+    padding: 20px   
+}
+
+/*tao ra chuyen dong cho anh tinh, sau keyFrame la dat ten */
+@keyframes modalFaceIn {
+    from {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+    to {
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+

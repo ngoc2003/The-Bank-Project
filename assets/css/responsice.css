@@ -1,0 +1,88 @@
+/*  TABLET & MOBILE */
+@media (max-width:768px) {
+    .mobile-ful-width{
+        padding:14px 20px !important;
+    }
+    .social-list{
+        font-size: 30px;
+        padding:0 3px;
+    }
+    .copyright{
+        padding-top:10px;
+    }
+    #nav .subnav a{
+        padding:10px 40px;
+        /*trên mobile độ cao tối thiểu nên là 42 cho dễ bấm */
+    }
+    .form-control,
+    .form-submit-btn{
+        border-radius: 0% !important;
+
+}
+
+/*  MOBILE  */
+@media (max-width:600px) {
+    #nav>li{
+        display:block;
+    }
+    #nav{
+        display: block;
+    }
+    #nav>li:first-child{  /* lấy thẻ li đầu tiên của thẻ nav */
+        display: inline-block;
+    }
+    #nav .subnav{
+        position: initial;
+        /* giá trị mặc định */
+        background-color: #333;
+    }
+    #nav .subnav a{
+        color:white;
+    }
+
+    #header{
+        overflow: hidden;
+    }
+    #header .finding-icons {
+        display: none;
+    }
+    #header .mobile-menu-btn{
+        display: block;
+    }
+
+    #content .member-list .mobile-member-item{
+        margin-bottom:30px;
+        width:100%;
+    }
+    #slider .text-content{
+        display: none !important;
+    }
+
+    #content .content-section{
+        padding-bottom: 64px;
+    }
+    #content .member-img{
+        width:70%;
+    }
+
+    .mobile-place-item{
+        width:100%;
+        padding: 15px 8px;
+    }
+    #contact .mobile-contact-content:first-child{
+        margin-bottom:16px;
+    }
+    #content .mobile-ful-width,
+    #contact .mobile-ful-width{
+        width:100%;
+        font-size:15px;
+        text-transform: uppercase;
+    }
+    #contact .mobile-contact-content{
+        width:100%;
+    }
+
+    #contact .mobile-fix-mg{
+        margin-top:-8px;
+    }
+}
